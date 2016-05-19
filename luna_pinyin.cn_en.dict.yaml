@@ -1,0 +1,197 @@
+---
+name: luna_pinyin.cn_en
+version: "2015.6.17"
+sort: by_weight
+use_preset_vocabulary: true
+...
+
+
+2B	er b	100
+2B	er bi	100
+AA制	a a zhi	100
+AMD	a m d	100
+ATI	ati	100
+ATM機	a t m ji	100
+Android	android	100
+Arduino	arduino	100
+Adobe	a do be	100
+Apple	apple	100
+App Store	app store	100
+	apple	100
+AirDrop	ai rdrop	100
+Alfred	alfred	100
+AnyConnect	an y c	100
+aText	a text	100
+Axure	a xure	100
+A片	a pian	100
+A盤	a pan	100
+A股	a gu	100
+B淋巴細胞	b lin ba xi bao	100
+B盤	b pan	100
+B細胞	b xi bao	100
+B股	b gu	100
+B超	b chao	100
+C盤	c pan	100
+C語言	c yu yan	100
+Chrome	chrome	100
+Cortana	co r tan a	100
+Curio	curio	100
+Day One	dayone	100
+DEVONthink	de v o n t	100
+DNA	d n a	100
+DVD	d v d	100
+D盤	d pan	100
+E盤	e pan	100
+EI Capitan	ei ca	100
+ePub	e pu b	100
+ExFAT	e x fa t	100
+F盤	f pan	100
+Fantastical	fan ta s	100
+Force Touch	f t	100
+FileVault	file v	100
+Google	google	100
+Gmail	gmail	100
+Graffle	graffle	100
+GoagentX	goagentx	100
+G盤	g pan	100
+G點	g dian	100
+H盤	h pan	100
+H股	h gu	100
+HTML	h t m l	100
+IP	i p	200
+IPv6	i p v liu	100
+IPv4	i p v si	100
+IP位址	i p wei zhi	100
+IP卡	i p ka	100
+IP地址	i p di zhi	100
+IP電話	i p dian hua	100
+I盤	i pan	100
+iTunes	i tunes	100
+iCloud	i cloud	100
+iMessage	i message	100
+iOS	i os	100
+iPad	i pad	120
+iPhone	i phone	150
+iPod	i pod	100
+iWatch	i watch	100
+J盤	j pan	100
+Knock	k nock	100
+K他	k ta	100
+K他	kei ta	100
+K她	k ta	100
+K她	kei ta	100
+K寶	k bao	100
+K寶	kei bao	100
+K歌	k ge	100
+K歌	kei ge	100
+K死他	k si ta	100
+K死他	kei si ta	100
+K死她	k si ta	100
+K死她	kei si ta	100
+K粉	k fen	100
+K粉	kei fen	100
+K金	k jin	100
+K金	kei jin	100
+Linux	linux	100
+Launcher	l a uncher	100
+MIPS	m i p s	100
+MP3	m p san	100
+MP4	m p si	100
+Mac	mac	100
+Macbook	mac book	100
+Macbook Air	mac book air	100
+Mac App Store	m a s	100
+Mailbox	mailbox	100
+Microsoft	m i c	100
+Moke	mo ke	100
+Nvidia	nvidia	100
+Numbers	number	100
+OS X	o s x	100
+Office	office	100
+OmniFocus	omni f	100
+OmniGraffle	omni g	100
+OmniPlan	omni P	100
+OneNote	one note	100
+Pages	pa ge s	100
+Parallels Desktop	pd	100
+POS機	p o s ji	100
+QQ	q q	100
+QQ會員	q q hui yuan	100
+QQ羣	q q qun	100
+QQ號	q q hao	100
+QQ號碼	q q hao ma	100
+QQ空間	q q kong jian	100
+QQ郵箱	q q you xiang	100
+Q幣	q bi	100
+Rime	rime	100
+Rime	zhong zhou yun	100
+Safari	sa fa ri	100
+ScreenFlow	scr een f	100
+Scrivener	scr i v	100
+scomper@gmail.com	s mail	100
+Safari View Controller	s v c	100
+Snagit	s na git	100
+SIM卡	s i m ka	100
+T型臺	t xing tai	100
+T恤	t xu	100
+T恤衫	t xu shan	100
+T淋巴細胞	t lin ba xi bao	100
+T細胞	t xi bao	100
+Tag	ta g	100
+Telegram	tele g	100
+TextExpander	text ex	100
+Terminal	ter minal	100
+Time Capsule	time cap	100
+Touch ID	touch id	100
+Tweetbot	tweet b	100
+Twitter	twitter	100
+Uber	u b er	100
+Ulysses	u lysses	100
+uBlock	u block	100
+UIM卡	u i m ka	100
+USB	u s b	100
+USIM卡	u s i m ka100
+U形管	u xing guan	100
+U盤	u pan	100
+U盾	u dun	100
+Watch	watch	100
+Widget	widget	100
+Word	word	100
+Workflow	wordflow	100
+Wi-Fi	wai fai	100
+Wi-Fi	wi fi	100
+WiFi	wai fai	100
+WiFi	wi fi	100
+Windows	wi ndows	100
+Xeon	xeon	100
+X光	x guang	100
+X刀	x dao	100
+X射線	x she xian	100
+X染色體	x ran se ti	100
+Y染色體	y ran se ti	100
+z變換	z bian huan	100
+z逆變換	z ni bian huan	100
+α射線	a er fa she xian	100
+α粒子	a er fa li zi	100
+β射線	bei ta she xian	100
+β粒子	bei ta li zi	100
+γ刀	ga ma dao	100
+γ射線	ga ma she xian	100
+三K黨	san k dang	100
+三K黨	san kei dang	100
+二B	er b	100
+二B	er bi	100
+傻B	sha b	100
+傻B	sha bi	100
+卡拉OK	ka la o k	100
+哆啦A夢	duo la a meng	100
+單邊z變換	dan bian z bian huan	100
+智能ABC	zhi neng a b c	100
+牛B	niu b	100
+牛B	niu bi	100
+裝B	zhuang b	100
+裝B	zhuang bi	100
+逗B	dou b	100
+逗B	dou bi	100
+阿Q	a q	100
+阿Q正傳	a q zheng zhuan	100

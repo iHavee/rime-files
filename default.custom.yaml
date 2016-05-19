@@ -1,0 +1,28 @@
+patch:
+  switcher:
+    abbreviate_options: true
+    caption: 〔切换〕
+    fold_options: true
+    hotkeys:
+      - "Control+grave"          # control + `
+      - "Control+s"              # 添加 Ctrl+s
+    save_options:
+      - full_shape
+      - ascii_punct
+      - simplification
+      - extended_charset
+  menu:
+    page_size: 5                 # 候选词数量
+
+  schema_list:
+    - schema: luna_pinyin_simp
+    - schema: emoji
+
+  ascii_composer:
+    switch_key:
+      Caps_Lock: noop
+      Control_L: noop
+      Control_R: noop
+      Eisu_toggle: clear
+      Shift_L: commit_code
+      Shift_R: commit_code
