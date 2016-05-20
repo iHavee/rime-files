@@ -3,7 +3,6 @@ patch:
   us_keyboard_layout: true                               # 美式键盘布局
   show_notifications_when: appropriate                   # 状态通知，适当，也可设为全开（always）全关（never）
 
-  
   style:
     color_scheme: light                                  # 配色方案名称
 
