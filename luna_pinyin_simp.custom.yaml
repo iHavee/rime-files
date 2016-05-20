@@ -34,7 +34,7 @@ patch:
       - fallback_segmentor
     translators:
       - punct_translator
-      - table_translator@custom_phrase
+      - r10n_translator
       - reverse_lookup_translator
       - script_translator
     filters:
@@ -45,8 +45,25 @@ patch:
     enable_charset_filter: true                          # 启用罕见字过滤
     dictionary: luna_pinyin.extended
 
+  recognizer:
+    patterns:
+      email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+      uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+      url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+      punct: "^/([a-z]+|[0-9]0?)$"
+      reverse_lookup: "`[a-z]*$"
+
   "schema/dependencies/@next": easy_en                   # 加載 easy_en 依賴
   "engine/translators/@next": table_translator@english   # 載入翻譯英文的碼表翻譯器，取名爲 english
+  schema/dependencies:
+    - emoji
+  abc_segmentor/extra_tags:
+    - reverse_lookup
+  reverse_lookup:
+    dictionary: emoji
+    enable_completion: false
+    prefix: "`"
+    tips: 〔表情〕
 
   english:                                               # english 翻譯器的設定項
     dictionary: easy_en
@@ -73,13 +90,6 @@ patch:
       "$": ["¥", "$", "€", "£", "¢", "¤"]
       "<": ["《", "〈", "«", "<"]
       ">": ["》", "〉", "»", ">"]
-
-  recognizer:
-    patterns:
-      email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
-      uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
-      url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
-      punct: "^/([a-z]+|[0-9]0?)$"
 
   speller:
     alphabet: zyxwvutsrqponmlkjihgfedcba
