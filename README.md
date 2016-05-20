@@ -5,5 +5,7 @@ Squirrel 鼠须管配置
 
 该文件仅作为参考，关注的仅两行配置，我是通过 iCloud Drive 来备份的。
 
-    installation_id: "RimeSync"
-    sync_dir: "/Users/Havee/Library/Mobile Documents/com~apple~CloudDocs"
+    installation_id: "Rime-Sync"
+    sync_dir: "/opt/Rime"
+
+如果你也想使用 iCloud Drive 来同步，那么，请参见文章 [给 Rime 添加第三方词库](http://havee.me/mac/2015-05/add-dic-for-rime.html) 的最后 **同步** 部分。
