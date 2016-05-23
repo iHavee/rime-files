@@ -34,36 +34,18 @@ patch:
       - fallback_segmentor
     translators:
       - punct_translator
-      - r10n_translator
+      - table_translator@custom_phrase
+      - table_translator@english
       - reverse_lookup_translator
       - script_translator
     filters:
       - simplifier
-      - uniquifier                                       # 过滤重复候选字
-      - cjk_minifier                                     # 过滤拼音輸入法中的罕用字
+      - uniquifier
+      - cjk_minifier                                     #過濾拼音輸入法中的罕用字
   translator:
-    enable_charset_filter: true                          # 启用罕见字过滤
-    dictionary: luna_pinyin.extended
-
-  recognizer:
-    patterns:
-      email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
-      uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
-      url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
-      punct: "^/([a-z]+|[0-9]0?)$"
-      reverse_lookup: "`[a-z]*$"
+    enable_charset_filter: true                          #启用罕见字過濾
 
   "schema/dependencies/@next": easy_en                   # 加載 easy_en 依賴
-  "engine/translators/@next": table_translator@english   # 載入翻譯英文的碼表翻譯器，取名爲 english
-  schema/dependencies:
-    - emoji
-  abc_segmentor/extra_tags:
-    - reverse_lookup
-  reverse_lookup:
-    dictionary: emoji
-    enable_completion: false
-    prefix: "`"
-    tips: 〔表情〕
 
   english:                                               # english 翻譯器的設定項
     dictionary: easy_en
@@ -71,6 +53,10 @@ patch:
     enable_completion: false
     enable_sentence: false
     initial_quality: -3
+
+  translator:
+    dictionary: luna_pinyin.extended
+  "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/
 
   punctuator:                                            # 符号快速输入和部分符号的快速上屏
     import_preset: symbols
@@ -91,10 +77,21 @@ patch:
       "<": ["《", "〈", "«", "<"]
       ">": ["》", "〉", "»", ">"]
 
-  speller:
-    alphabet: zyxwvutsrqponmlkjihgfedcba
-    algebra:
-    - erase/^xx$/                                      # 第一行保留
-    - abbrev/^([a-z]).+$/$1/                           # 简拼（首字母）
-    - abbrev/^([zcs]h).+$/$1/                          # 简拼（zh, ch, sh）
-    - derive/^([nl])ve$/$1ue/                          # nve = nue, lve = lue
+  recognizer:
+    patterns:
+      email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+      uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+      url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+      punct: "^/([a-z]+|[0-9]0?)$"
+      reverse_lookup: "`[a-z]*'?$"
+
+  reverse_lookup:
+    comment_format:
+      - "xform/([nl])v/$1ü/"
+    dictionary: stroke
+    enable_completion: true
+    preedit_format:
+      - "xlit/hspnz/一丨丿丶乙/"
+    prefix: "`"
+    suffix: "'"
+    tips: "〔筆畫〕"
