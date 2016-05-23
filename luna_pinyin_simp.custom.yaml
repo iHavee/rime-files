@@ -5,8 +5,6 @@ patch:
       states: ["中文", "西文"]
     - name: full_shape
       states: ["半角", "全角"]
-    - name: extended_charset
-      states: ["通用", "增廣"]
     - name: zh_simp
       reset: 1
       states: ["漢字", "汉字"]
@@ -16,46 +14,14 @@ patch:
   simplifier:
     option_name: zh_simp
 
-  engine:
-    processors:
-      - ascii_composer
-      - recognizer
-      - key_binder
-      - speller
-      - punctuator
-      - selector
-      - navigator
-      - express_editor
-    segmentors:
-      - ascii_segmentor
-      - matcher
-      - abc_segmentor
-      - punct_segmentor
-      - fallback_segmentor
-    translators:
-      - punct_translator
-      - table_translator@custom_phrase
-      - table_translator@english
-      - reverse_lookup_translator
-      - script_translator
-    filters:
-      - simplifier
-      - uniquifier
-      - cjk_minifier                                     #過濾拼音輸入法中的罕用字
+  "engine/filters/@next": cjk_minifier
+  "engine/translators/@next": reverse_lookup_translator
   translator:
     enable_charset_filter: true                          #启用罕见字過濾
 
-  "schema/dependencies/@next": easy_en                   # 加載 easy_en 依賴
-
-  english:                                               # english 翻譯器的設定項
-    dictionary: easy_en
-    spelling_hints: 9
-    enable_completion: false
-    enable_sentence: false
-    initial_quality: -3
-
   translator:
     dictionary: luna_pinyin.extended
+
   "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/
 
   punctuator:                                            # 符号快速输入和部分符号的快速上屏
