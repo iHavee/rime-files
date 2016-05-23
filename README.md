@@ -3,7 +3,7 @@ Squirrel 鼠须管配置
 
 **installation.yaml**
 
-该文件仅作为参考，如果需要同步，则添加下面一行。在你同步工具的目录创建一个文件夹 **Rime**，并软链接到 **~/Library/Rime/sync**
+该文件仅作为参考，如果需要同步，则添加下面一行。
 
     installation_id: "Rime"
 
