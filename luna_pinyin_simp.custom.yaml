@@ -16,11 +16,10 @@ patch:
 
   "engine/filters/@next": cjk_minifier
   "engine/translators/@next": reverse_lookup_translator
-  translator:
-    enable_charset_filter: true                          #启用罕见字過濾
 
   translator:
     dictionary: luna_pinyin.extended
+    enable_charset_filter: true                          #启用罕见字過濾
 
   "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/
 
