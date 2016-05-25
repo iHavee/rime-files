@@ -8,8 +8,6 @@ import_tables:
   - luna_pinyin.hanyu
   - luna_pinyin.poetry
   - luna_pinyin.computer
-  - luna_pinyin.movie
-  - luna_pinyin.music
   - luna_pinyin.name
 ...
 
