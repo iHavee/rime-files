@@ -1,6 +1,6 @@
 ---
 name: luna_pinyin.computer
-version: "2014.07.10"
+version: "2015.07.10"
 sort: by_weight
 use_preset_vocabulary: true
 ...
