@@ -7,9 +7,10 @@ import_tables:
   - luna_pinyin
   - luna_pinyin.hanyu
   - luna_pinyin.poetry
+  - luna_pinyin.address
   - luna_pinyin.computer
   - luna_pinyin.name
-  - luna_pinyin.netpop
+  - luna_pinyin.daily
 ...
 
 一一列舉
