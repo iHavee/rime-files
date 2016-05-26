@@ -23,7 +23,7 @@ patch:
       font_face: "PingFangSC-Regular"                    # 候选词字体
       font_point: 18                                     # 预选栏文字字号
       label_font_face: "PingFangSC-Light"                # 候选词编号字体
-      label_font_point: 14                               # 预选栏编号字号
+      label_font_point: 18                               # 预选栏编号字号
       candidate_text_color: 0x000000                     # 预选项文字颜色
       text_color: 0x000000                               # 拼音行文字颜色，24位色值，16进制，BGR顺序
       comment_text_color: 0x999999                       # 拼音等提示文字颜色
