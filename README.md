@@ -163,7 +163,6 @@
       - luna_pinyin.hanyu
       - luna_pinyin.poetry
       - luna_pinyin.sogou
-      - luna_pinyin.address
       - luna_pinyin.computer
       - luna_pinyin.name
       - luna_pinyin.daily
