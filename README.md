@@ -1,21 +1,23 @@
-Squirrel 鼠须管配置
-==================
+# Rime 配置
 
-installation.yaml
------------------
+各平台配置文件路径
 
-该文件仅作为参考，如果需要同步，则添加下面一行。
+* Windows
+    * Weasel: %APPDATA%\Rime
+* Mac OS X
+    * Squirrel: ~/Library/Rime
+* Linux
+    * iBus: ~/.config/ibus/rime
+    * Fcitx: ~/.config/fcitx/rime
 
-    installation_id: "Rime"
+配置扩展词库需要文件
 
-在你同步工具的目录创建一个文件夹 **Rime**，并软链接到 **~/Library/Rime/sync**
+1. default.custom.yaml
+2. luna_pinyin.simp.custom.yaml
+3. luna_pinyin.extended.dict.yaml
+4. squirrel.custom.yaml (Linux 下不需要)
 
-    ln -s /your/synctool/path/Rime  ~/Library/Rime/sync/
-
-如果你也想使用 iCloud Drive 来同步，那么，请参见文章 [给 Rime 添加第三方词库](http://havee.me/mac/2015-05/add-dic-for-rime.html) 的最后 **同步** 部分。
-
-default.custom.yaml
--------------------
+## default.custom.yaml
 
     patch:
       switcher:
@@ -46,8 +48,7 @@ default.custom.yaml
           Shift_L: commit_code
           Shift_R: commit_code
 
-squirrel.custom.yaml
---------------------
+## squirrel.custom.yaml
 
     patch:
       show_notifications_via_notification_center: true
@@ -92,63 +93,61 @@ squirrel.custom.yaml
         org.vim.MacVim: *a
         com.apple.Terminal: *a
 
-luna_pinyin.simp.custom.yaml
-----------------------------
+## luna_pinyin.simp.custom.yaml
 
-patch:
-  switches:
-    - name: ascii_mode
-      reset: 0
-      states: ["中文", "西文"]
-    - name: full_shape
-      states: ["半角", "全角"]
-    - name: zh_simp
-      reset: 1
-      states: ["漢字", "汉字"]
-    - name: ascii_punct
-      states: ["。，", "．，"]
+    patch:
+      switches:
+        - name: ascii_mode
+          reset: 0
+          states: ["中文", "西文"]
+        - name: full_shape
+          states: ["半角", "全角"]
+        - name: zh_simp
+          reset: 1
+          states: ["漢字", "汉字"]
+        - name: ascii_punct
+          states: ["。，", "．，"]
 
-  simplifier:
-    option_name: zh_simp
+      simplifier:
+        option_name: zh_simp
 
-  "engine/filters/@next": cjk_minifier
-  "engine/translators/@next": reverse_lookup_translator
+      "engine/filters/@next": cjk_minifier
+      "engine/translators/@next": reverse_lookup_translator
 
-  translator:
-    dictionary: luna_pinyin.extended                     # 扩展词库
-    enable_charset_filter: true                          # 罕见字过滤
+      translator:
+        dictionary: luna_pinyin.extended                     # 扩展词库
+        enable_charset_filter: true                          # 罕见字过滤
 
-  "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/
+      "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/
 
-  punctuator:                                            # 符号快速输入和部分符号的快速上屏
-    import_preset: symbols
-    full_shape:
-      "\\": "、"
-    half_shape:
-      "#": "#"
-      "`": "`"
-      "~": "~"
-      "@": "@"
-      "=": "="
-      "/": ["/", "÷"]
-      '\': "、"
-      "'": {pair: ["「", "」"]}
-      "[": ["【", "["]
-      "]": ["】", "]"]
-      "$": ["¥", "$", "€", "£", "¢", "¤"]
-      "<": ["《", "〈", "«", "<"]
-      ">": ["》", "〉", "»", ">"]
+      punctuator:                                            # 符号快速输入和部分符号的快速上屏
+        import_preset: symbols
+        full_shape:
+          "\\": "、"
+        half_shape:
+          "#": "#"
+          "`": "`"
+          "~": "~"
+          "@": "@"
+          "=": "="
+          "/": ["/", "÷"]
+          '\': "、"
+          "'": {pair: ["「", "」"]}
+          "[": ["【", "["]
+          "]": ["】", "]"]
+          "$": ["¥", "$", "€", "£", "¢", "¤"]
+          "<": ["《", "〈", "«", "<"]
+          ">": ["》", "〉", "»", ">"]
 
-  recognizer:
-    patterns:
-      email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
-      uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
-      url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
-      punct: "^/([a-z]+|[0-9]0?)$"
-      reverse_lookup: "`[a-z]*'?$"
+      recognizer:
+        patterns:
+          email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+          uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+          url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+          punct: "^/([a-z]+|[0-9]0?)$"
+          reverse_lookup: "`[a-z]*'?$"
 
-luna_pinyin.extended.dict.yaml
-------------------------------
+## luna_pinyin.extended.dict.yaml
 
     ---
     name: luna_pinyin.extended
@@ -165,3 +164,15 @@ luna_pinyin.extended.dict.yaml
       - luna_pinyin.name
       - luna_pinyin.daily
     ...
+
+## installation.yaml
+
+该文件仅作为参考，如果需要同步，则添加下面一行。
+
+    installation_id: "Rime"
+
+譬如在 OS X 下，同步工具的目录创建一个文件夹 **Rime**，并软链接到 **~/Library/Rime/sync**
+
+    ln -s /your/synctool/path/Rime  ~/Library/Rime/sync/
+
+如果你也想使用 iCloud Drive 来同步，那么，请参见文章 [给 Rime 添加第三方词库](http://havee.me/mac/2015-05/add-dic-for-rime.html) 的最后 **同步** 部分。
