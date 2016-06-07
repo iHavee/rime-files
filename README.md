@@ -15,7 +15,9 @@
 1. default.custom.yaml
 2. luna_pinyin.simp.custom.yaml
 3. luna_pinyin.extended.dict.yaml
-4. squirrel.custom.yaml (Linux 下不需要)
+4.
+    * weasel.custom.yaml (Windows)
+    * squirrel.custom.yaml (Mac OS X)
 
 ## default.custom.yaml
 
