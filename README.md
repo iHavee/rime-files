@@ -12,10 +12,13 @@
 
 配置扩展词库需要文件
 
-1. default.custom.yaml
-2. luna_pinyin.simp.custom.yaml
-3. luna_pinyin.extended.dict.yaml
-4.
+1. 快捷键、候选栏、输入方案选单等等定义
+    * default.custom.yaml
+2. 朙月拼音自定义
+    * luna_pinyin.simp.custom.yaml
+3. 扩充词库定义
+    * luna_pinyin.extended.dict.yaml
+4. 外观样式定义
     * weasel.custom.yaml (Windows)
     * squirrel.custom.yaml (Mac OS X)
 
@@ -27,19 +30,18 @@
         caption: 〔切换〕
         fold_options: true
         hotkeys:
-          - "Control+grave"          # control + `
-          - "Control+s"              # 添加 Ctrl+s
+          - "Control+grave"                                  # control + `
+          - "Control+s"                                      # 添加 Ctrl+s
         save_options:
           - full_shape
           - ascii_punct
           - simplification
           - extended_charset
       menu:
-        page_size: 5                 # 候选词数量
+        page_size: 5                                         # 候选词数量
 
-      schema_list:
+      schema_list:                                           # 激活的输入方案选单，这里只保留朙月拼音・简化字
         - schema: luna_pinyin_simp
-        - schema: emoji
 
       ascii_composer:
         switch_key:
@@ -50,12 +52,12 @@
           Shift_L: commit_code
           Shift_R: commit_code
 
-## squirrel.custom.yaml
+## squirrel.custom.yaml/weasel.custom.yaml
 
     patch:
       show_notifications_via_notification_center: true
       us_keyboard_layout: true                               # 美式键盘布局
-      show_notifications_when: appropriate                   # 状态通知，适当，也可设为全开（always）全关（never）
+      show_notifications_when: appropriate                   # 状态通知条，默认growl_is_running，也可设置为全开（always）全关（never）
 
       style:
         color_scheme: light                                  # 配色方案名称
@@ -63,7 +65,7 @@
       preset_color_schemes:
         light:
           name: register                                     # 作者名
-          author: "register <registerdedicated@gmail.com>"   # 作者
+          author: "register <registerdedicated(at)gmail.com>"# 作者
 
           horizontal: true                                   # 候选条横向显示
           inline_preedit: true                               # 启用内嵌编码模式，候选条首行不显示拼音
