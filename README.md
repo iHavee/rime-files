@@ -12,6 +12,7 @@
 
 配置扩展词库需要文件
 
+<<<<<<< HEAD
 1. 快捷键、候选栏、输入方案选单等等定义
     * default.custom.yaml
 2. 朙月拼音自定义
@@ -19,6 +20,12 @@
 3. 扩充词库定义
     * luna_pinyin.extended.dict.yaml
 4. 外观样式定义
+=======
+1. default.custom.yaml
+2. luna_pinyin.simp.custom.yaml
+3. luna_pinyin.extended.dict.yaml
+4. 
+>>>>>>> 1ee93a451891c4b2ebb844568c0d65982496b01e
     * weasel.custom.yaml (Windows)
     * squirrel.custom.yaml (Mac OS X)
 
