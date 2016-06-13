@@ -16,7 +16,6 @@ patch:
 
   schema_list:
     - schema: luna_pinyin_simp
-    - schema: emoji
 
   ascii_composer:
     switch_key:
