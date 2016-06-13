@@ -6,7 +6,6 @@ use_preset_vocabulary: true
 import_tables:
   - luna_pinyin
   - luna_pinyin.sogou
-  - luna_pinyin.poetry
   - luna_pinyin.computer
   - luna_pinyin.name
   - luna_pinyin.daily
