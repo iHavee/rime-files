@@ -18,7 +18,7 @@ patch:
       corner_radius: 5                                   # 候选条圆角半径
       border_height: 7                                   # 窗口边界高度，大于圆角半径才生效
       border_width: 7                                    # 窗口边界宽度，大于圆角半径才生效
-      back_color: 0xEEEEEE                               # 候选条背景色
+      back_color: 0xFFFFFF                               # 候选条背景色
       border_color: 0xE0B693                             # 边框色
       font_face: "PingFangSC-Regular"                    # 候选词字体
       font_point: 18                                     # 预选栏文字字号
@@ -30,7 +30,7 @@ patch:
       comment_text_color: 0x999999                       # 拼音等提示文字颜色
       hilited_text_color: 0xFF6941                       # 高亮拼音 (需要开启内嵌编码)
       hilited_candidate_text_color: 0xFF6941             # 第一候选项文字颜色
-      hilited_candidate_back_color: 0xEEEEEE             # 第一候选项背景背景色
+      hilited_candidate_back_color: 0xFFFFFF             # 第一候选项背景背景色
       hilited_candidate_label_color: 0xFF6941            # 第一候选项编号颜色
       hilited_comment_text_color: 0xFF6941               # 注解文字高亮
 
