@@ -5,6 +5,7 @@ patch:
 
   style:
     color_scheme: light                                  # 配色方案名称
+    #alpha: 0.99                                         # 透明度
 
   preset_color_schemes:
     light:
