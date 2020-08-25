@@ -1,13 +1,14 @@
 patch:
   switches:
     - name: ascii_mode
-      reset: 0
-      states: ["中文", "西文"]
+      reset: 1                                          # 默认英文
+      states: ["中文", "英文"]
     - name: full_shape
+      reset: 0                                          # 默认半角
       states: ["半角", "全角"]
     - name: zh_simp
-      reset: 1
-      states: ["漢字", "汉字"]
+      reset: 1                                          # 预设简体
+      states: ["繁体", "简体"]
     - name: ascii_punct
       states: ["。，", "．，"]
 
@@ -19,6 +20,7 @@ patch:
 
   translator:
     dictionary: luna_pinyin.extended
+    prism: luna_pinyin_simp
     enable_charset_filter: true                          #启用罕见字過濾
 
   "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/

@@ -1,2 +1,4 @@
 .DS_Store
 .Spotlight-v100
+luna_pinyin.userdb
+build/*.bin
